@@ -1,6 +1,6 @@
 lexer grammar MyLangLexer;
 
-// Palavras-chave principais
+// Palavras chave principais
 PROGRAM     : 'program';
 VAR         : 'var';
 BEGIN       : 'begin';
@@ -14,7 +14,7 @@ FOR         : 'for';
 TO          : 'to';
 PRINT       : 'print';
 
-// Tipos básicos
+// Tipos basicos
 INTEGER     : 'integer';
 REAL_T      : 'real';
 STRING_T    : 'string';
@@ -24,14 +24,14 @@ BOOLEAN     : 'boolean';
 INT         : [0-9]+;
 REAL        : [0-9]+ '.' [0-9]+;
 
-// Strings com suporte a interpolação: "Olá ${nome}"
+// Strings com suporte a interpolação: "Ola ${nome}"
 STRING      : '"' ( ~["\\] | '\\' . | Interp )* '"';
 fragment Interp : '${' .*? '}';
 
 // Identificadores com suporte a acentos
 ID          : [\p{L}_][\p{L}\p{N}_]*;
 
-// Operadores e símbolos
+// Operadores e simbolos
 ASSIGN      : ':=';
 PLUS        : '+';
 MINUS       : '-';
@@ -57,7 +57,7 @@ DOT         : '.';
 LPAREN      : '(';
 RPAREN      : ')';
 
-// Espaços e comentários
+// Espaços e comentarios
 WS          : [ \t\r\n]+ -> skip;
 COMMENT     : '{' .*? '}' -> skip;
 LINECOMMENT : '//' ~[\r\n]* -> skip;

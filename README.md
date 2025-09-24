@@ -51,7 +51,7 @@ AnalisadorLexico/
 │   ├── input1.pas         # Teste Pascal básico
 │   ├── input2.pas         # Teste só com extensões
 │   └── input3.pas         # Teste misto
-└── README.md              # Este arquivo
+└── README.md              
 ```
 
 ---

@@ -8,13 +8,13 @@ program     : PROGRAM ID SEMI block DOT EOF ;
 // Bloco de declarações e comandos
 block       : (varDecl | stmt)* ;
 
-// Declaração de variáveis
+// Declaração de variaveis
 varDecl     : VAR ID (COLON type)? SEMI ;
 
-// Tipos básicos
+// Tipos basicos
 type        : INTEGER | REAL_T | STRING_T | BOOLEAN ;
 
-// Comandos possíveis
+// Comandos
 stmt
     : assignStmt
     | incStmt
@@ -50,7 +50,7 @@ printStmt   : PRINT LPAREN expr RPAREN SEMI ;
 // Bloco BEGIN ... END
 blockStmt   : BEGIN stmt* END ;
 
-// Expressões matemáticas, relacionais e if ternário
+// Expressões matematicas, relacionais e if ternario
 expr
     : expr op=MUL expr                    # MulExpr
     | expr op=DIV expr                    # DivExpr
